@@ -51,7 +51,7 @@ final class RankingApi(
   private def makeId(userId: UserId, perfType: PerfType) = s"$userId:${perfType.id}"
 
   private[user] object topPerf:
-    val maxPerPage = MaxPerPage(100)
+    val maxPerPage = MaxPerPage(200)
 
     def pager(perf: PerfKey, page: Int): Fu[Paginator[LightPerf]] =
       Paginator(
